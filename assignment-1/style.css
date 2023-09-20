@@ -2,3 +2,160 @@ html {
   height: 100%;
   width: 100%;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+
+/*header style*/
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem ;
+  border-bottom: 2.2px solid rgb(137, 137, 137);
+  box-shadow: #cecccc 0 0 0.2rem;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+}
+
+.profile-name{
+  padding-left: 0.5rem;
+}
+
+.profile-logo{
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background-color: #747F89;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*main style*/
+.main{
+  background-color: #cacdd0;
+}
+
+.btn-yes{
+  background-color: #D44D61;
+  height: 3rem;
+  width: 7rem;
+  font-size: medium;
+  color: #F7F8F9;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.txt-box{
+  margin: 0 1rem 1rem 0;
+  height: 3rem;
+  width: 20rem;
+  padding-left: 0.5rem;
+  font-size: medium;
+  border-radius: 5px;
+  border: #747F89 solid 2px;
+}
+
+/*add and search style*/
+.func {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+/*table style*/
+.tabledisplay{
+  padding: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th, td {
+  border: 2px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* modal style */
+.modal {
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center; 
+  align-items: center; 
+ 
+}
+
+.closeAdd{
+  background-color: transparent;
+  border: none;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #D44D61; 
+  cursor: pointer;
+  width: 40px; 
+  border-radius: 50%; 
+}
+
+
+.modal form {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: #747F89 solid 2px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.wrapper-add{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.wrapper-close{
+  margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+}
+
+.modal .wrapper-add .btn-yes{
+  margin-top: 3rem;
+  float: right;
+}
+
+.del-func {
+  text-decoration: underline;
+  color: #D44D61;
+  cursor: pointer;
+}
+
+#del-book-form{
+  border: none;
+  background: none;
+  padding-right: 2rem;
+  font-size: medium;
+  cursor: pointer;  
+}

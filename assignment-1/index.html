@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    Hello world
+    <header>
+      <h1>Bookstore</h1>
+      <div class="profile">
+        <div class="profile-logo"> MN </div>
+        <span class="profile-name"> Minh Nhat </span>
+      </div>
+    </header>
+
+    <main>
+      <section class="func">
+        <div class="func-add-search">
+          <input type="text" id="search-func" class="txt-box" placeholder="Search books" oninput="searchBooks()">
+          <button type="submit" id="add-func" class="btn-yes" >Add book</button>
+        </div>
+      </section>
+
+      <section class="tabledisplay">
+        <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Author</th>
+                  <th>Topic</th>
+                  <th>Button Action</th>
+              </tr>
+          </thead>
+          <tbody id="book-table">
+              <tr>
+                  <td>Article 1</td>
+                  <td>John Doe</td>
+                  <td>Technology</td>
+                  <td class="del-func">Delete</a></td>
+              </tr>
+              <tr>
+                  <td>Article 2</td>
+                  <td>Jane Smith</td>
+                  <td>Science</td>
+                  <td class="del-func">Delete</td>
+              </tr>
+              <tr>
+                  <td>Article 3</td>
+                  <td>Michael Johnson</td>
+                  <td>Health</td>
+                  <td class="del-func">Delete</td>
+              </tr>
+          </tbody>
+      </table>
+      </section>
+
+      <section class="dialog-container">
+        <dialog id="add-modal" class="modal">
+          <form>
+              <div class="wrapper-add">
+                <h2 >Add Book</h2>
+                <button class="close-modal closeAdd" type="button">X</button>
+              </div>
+            
+              <label for="name-add"> Name </label>
+              <input name="name" type="text" id="name-add" class="txt-box"  placeholder="Book's name">
+
+              <label for="author-add"> Author </label>
+              <input name="author" type="text" id="author-add" class="txt-box"  placeholder="Book's author">
+
+              <label for="topic"> Topic </label>
+              <select id="topic" name="topicc" class="txt-box">
+                <option value="program">Programming</option>
+                <option value="devops">DevOps</option>
+                <option value="design">Design</option>
+                <option value="algor">Algorithm</option><option value="design">Fiat</option>
+                <option value="economy">Economy</option>
+              </select>
+
+              <button class="btn-yes" id="add-book-form" type="submit">Add</button>
+          </form>
+      </dialog>
+  
+      <!-- Delete Confirmation Modal -->
+      <dialog id="delete-modal" class="modal">
+          <form>
+              <h2>Confirm Delete</h2>
+              <p id="delete-message" >Are you sure you want to delete this book?</p>
+
+              <div class="wrapper-close">
+                <button id="del-book-form" type="button">Delete</button>
+                <button class="btn-yes close-modal" type="button">Cancel</button>
+              </div>
+          </form>
+      </dialog>
+      </section>
+    </main>
+    <footer>
+
     <script src="script.js"></script>
   </body>
 </html>
